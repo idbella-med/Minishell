@@ -6,7 +6,7 @@
 /*   By: mohidbel <mohidbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 13:37:25 by mohidbel          #+#    #+#             */
-/*   Updated: 2025/10/20 18:10:02 by mohidbel         ###   ########.fr       */
+/*   Updated: 2025/12/02 15:02:53 by mohidbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	norm_main(t_mini *mini, t_garbege **head, struct termios *term)
 		if (g_check_signal == SIGINT)
 		{
 			mini->exit = 1;
-			g_check_signal = (int)SIG_DFL;
+			g_check_signal = 0;
 		}
 		if (!tmp)
 		{

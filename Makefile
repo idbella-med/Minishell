@@ -7,7 +7,7 @@ NAME = minishell
 FLAGS =  -Wall -Wextra -Werror
 SFLAGS = -lreadline
 COMP = cc
-HEADRES = main/minishell.h Libft/libft.h
+HEADRES = main/minishell.h LIBFT/libft.h
 
 SRCS = 	main/minishell.c\
 		utils/find_paths.c\
@@ -103,21 +103,20 @@ all: $(NAME)
 	@echo "$(GREEN)Compilation completed!$(RESET)"
 
 $(NAME): $(OBGS) $(SRC_LIBFT)
-	
-	@make -C Libft
-	@$(COMP) $(FLAGS) $(OBGS) Libft/libft.a $(SFLAGS) -o $@
+	@make -C LIBFT
+	@$(COMP) $(FLAGS) $(OBGS) LIBFT/libft.a $(SFLAGS) -o $@
 
 %.o: %.c $(HEADRES)
 	@echo "$(RED)compiling...$(RESET)"
 	@$(COMP) $(FLAGS) -c $< -o $@
 
 clean:
-	@make clean -C Libft
+	@make clean -C LIBFT
 	@rm -rf $(OBGS)
 
 fclean: clean
 	@echo "$(RED)Start cleaning...$(RESET)"
-	@make fclean -C Libft
+	@make fclean -C LIBFT
 	@rm -rf $(NAME)
 	@echo "$(GREEN)cleaning Done...$(RESET)"
 

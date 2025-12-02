@@ -6,7 +6,7 @@
 /*   By: mohidbel <mohidbel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 14:30:11 by mohidbel          #+#    #+#             */
-/*   Updated: 2025/07/03 18:02:48 by mohidbel         ###   ########.fr       */
+/*   Updated: 2025/12/02 16:07:18 by mohidbel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@
 # include <readline/readline.h>
 # include <signal.h>
 # include <termios.h>
-# include "../Libft/libft.h"
+# include "../LIBFT/libft.h"
 # include <stdbool.h>
+#include <sys/wait.h>
 # include <dirent.h>
 
-int	g_check_signal;
+extern int	g_check_signal;
 
 typedef struct tokens
 {
