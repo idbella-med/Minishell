@@ -103,7 +103,7 @@ pwd
 
 # 🧑‍💻 Contributors
 - @me
-- @aayad
+- [@aayad](https://github.com/abdellahayad)
 
 
 
